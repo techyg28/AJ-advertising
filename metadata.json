@@ -1,0 +1,6 @@
+{
+  "name": "AJ Advertising Agency",
+  "description": "A modern, high-contrast creative digital advertising agency serving individuals, startups, and SMBs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
