@@ -20,17 +20,19 @@
   </head>
   <body class="bg-[#111111] text-neutral-100 antialiased font-['Plus_Jakarta_Sans',sans-serif] selection:bg-[#FF3B30] selection:text-white">
     <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
     <script>
       // Fallback redirect if user deployed GitHub Pages directly from repository root
-      if (window.location.hostname.endsWith('github.io') && !window.location.pathname.includes('/docs/')) {
-        const repoPath = window.location.pathname.replace(/\/$/, '');
-        const devScript = document.querySelector('script[src*="main.tsx"]');
-        if (devScript) {
-          window.location.replace((repoPath || '') + '/docs/');
+      (function() {
+        if (window.location.hostname.endsWith('github.io') && !window.location.pathname.includes('/docs')) {
+          var devScript = document.querySelector('script[src*="main.tsx"]');
+          if (devScript) {
+            var repoPath = window.location.pathname.replace(/\/+$/, '');
+            window.location.replace(window.location.origin + repoPath + '/docs/' + window.location.search + window.location.hash);
+          }
         }
-      }
+      })();
     </script>
-    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
 
