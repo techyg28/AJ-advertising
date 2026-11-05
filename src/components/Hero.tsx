@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowDownRight, Sparkles, TrendingUp, CheckCircle2 } from 'lucide-react';
+import heroDigitalShowcase from '../assets/images/hero_digital_showcase_1793879736627.jpg';
 
 export const Hero: React.FC = () => {
   const scrollToAbout = () => {
@@ -124,7 +125,7 @@ export const Hero: React.FC = () => {
               {/* Main Visual Card */}
               <div className="relative rounded-3xl overflow-hidden border border-neutral-800 bg-neutral-900/90 shadow-2xl">
                 <img
-                  src="/src/assets/images/hero_digital_showcase_1793879736627.jpg"
+                  src={heroDigitalShowcase}
                   alt="Modern digital products, tablets and creative campaigns over warm architectural horizon"
                   className="w-full h-auto object-cover transform hover:scale-102 transition-transform duration-700 aspect-[16/11]"
                   loading="eager"

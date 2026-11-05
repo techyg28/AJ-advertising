@@ -1,4 +1,8 @@
 import { ServiceItem, TeamMember } from '../types';
+import teamCreativeLead from '../assets/images/team_creative_lead_1793879738626.jpg';
+import teamTechLead from '../assets/images/team_tech_lead_1793879739485.jpg';
+import team3dArtist from '../assets/images/team_3d_artist_1793879739340.jpg';
+import aboutCreativeStudio from '../assets/images/about_creative_studio_1793879739299.jpg';
 
 export const SERVICES_DATA: ServiceItem[] = [
   {
@@ -65,7 +69,7 @@ export const TEAM_DATA: TeamMember[] = [
     role: 'Creative Director & Founder',
     specialty: 'Brand Identity & Visual Storytelling',
     bio: 'Former senior creative strategist with 11+ years elevating global consumer brands and high-growth Indian startups. Champions bold, human-centric design that cuts through digital noise.',
-    image: '/src/assets/images/team_creative_lead_1793879738626.jpg',
+    image: teamCreativeLead,
     experienceYears: 11
   },
   {
@@ -74,7 +78,7 @@ export const TEAM_DATA: TeamMember[] = [
     role: 'Head of Engineering & UX',
     specialty: 'Full-Stack Architecture & User Experience',
     bio: 'Pioneers scalable web applications and intuitive interfaces. Specializes in performance-first engineering, accessible interaction systems, and high-velocity development pipelines.',
-    image: '/src/assets/images/team_tech_lead_1793879739485.jpg',
+    image: teamTechLead,
     experienceYears: 9
   },
   {
@@ -83,7 +87,7 @@ export const TEAM_DATA: TeamMember[] = [
     role: 'Lead 3D Motion Artist',
     specialty: 'Spatial CGI & Kinetic Art Direction',
     bio: 'Award-winning digital sculptor and motion designer transforming complex technological products into fluid, visually mesmerizing 3D journeys.',
-    image: '/src/assets/images/team_3d_artist_1793879739340.jpg',
+    image: team3dArtist,
     experienceYears: 7
   },
   {
@@ -92,7 +96,7 @@ export const TEAM_DATA: TeamMember[] = [
     role: 'Head of Performance Growth',
     specialty: 'Omnichannel ROAS & Acquisition',
     bio: 'Data strategist responsible for managing over ₹25Cr in digital ad spend across APAC, delivering disciplined CPA reduction and compounding organic acquisition funnels.',
-    image: '/src/assets/images/about_creative_studio_1793879739299.jpg',
+    image: aboutCreativeStudio,
     experienceYears: 8
   }
 ];

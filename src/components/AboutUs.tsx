@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight, Award, Zap, Target, Check } from 'lucide-react';
+import aboutCreativeStudio from '../assets/images/about_creative_studio_1793879739299.jpg';
 
 export const AboutUs: React.FC = () => {
   const handleConnectClick = () => {
@@ -33,7 +34,7 @@ export const AboutUs: React.FC = () => {
           <div className="md:col-span-6 lg:col-span-7 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-neutral-200 bg-neutral-100 group">
               <img
-                src="/src/assets/images/about_creative_studio_1793879739299.jpg"
+                src={aboutCreativeStudio}
                 alt="Creative collaborative workspace at AJ Advertising Agency"
                 className="w-full h-[320px] sm:h-[400px] md:h-[440px] lg:h-[480px] object-cover group-hover:scale-102 transition-transform duration-700"
                 loading="lazy"

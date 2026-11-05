@@ -13,7 +13,6 @@
     <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self' mailto:;" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -21,6 +20,16 @@
   </head>
   <body class="bg-[#111111] text-neutral-100 antialiased font-['Plus_Jakarta_Sans',sans-serif] selection:bg-[#FF3B30] selection:text-white">
     <div id="root"></div>
+    <script>
+      // Fallback redirect if user deployed GitHub Pages directly from repository root
+      if (window.location.hostname.endsWith('github.io') && !window.location.pathname.includes('/docs/')) {
+        const repoPath = window.location.pathname.replace(/\/$/, '');
+        const devScript = document.querySelector('script[src*="main.tsx"]');
+        if (devScript) {
+          window.location.replace((repoPath || '') + '/docs/');
+        }
+      }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
